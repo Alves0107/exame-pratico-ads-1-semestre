@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se como voluntário na ONG Mãos Unidas e faça a diferença na vida de famílias em situação de vulnerabilidade.">
+    <meta name="keywords" content="cadastro de voluntários, seja voluntário, terceiro setor, solidariedade, ONG Mãos Unidas">
+    <meta name="author" content="ONG Mãos Unidas">
+    <title>Faça Parte / Cadastro | ONG Mãos Unidas</title>
+</head>
+<body>
+
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header>
+        <div>
+            <a href="../index.html">
+                <img src="../assets/images/logo.svg" alt="Logotipo da ONG Mãos Unidas" width="220" height="60">
+            </a>
+        </div>
+
+        <!-- MENU DE NAVEGAÇÃO PRINCIPAL -->
+        <nav aria-label="Navegação Principal">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos Sociais</a></li>
+                <li><a href="cadastro.html" aria-current="page">Faça Parte / Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- SEÇÃO HERO / APRESENTAÇÃO DO CADASTRO -->
+        <section aria-labelledby="titulo-cadastro">
+            <h1 id="titulo-cadastro">Faça Parte da Mudança: Cadastro de Voluntários</h1>
+            <p>Seja bem-vindo(a) à nossa rede de solidariedade! Dedicar algumas horas do seu mês pode transformar realidades inteiras. Preencha os campos abaixo com suas informações para que nossa coordenação entre em contato.</p>
+
+            <figure>
+                <img src="../assets/images/voluntariado.svg" alt="Ilustração de voluntários colaborando em equipe" width="600" height="300">
+                <figcaption>O voluntariado é o coração de todas as ações promovidas pelo Instituto Mãos Unidas.</figcaption>
+            </figure>
+        </section>
+
+        <!-- SEÇÃO DO FORMULÁRIO DE CADASTRO -->
+        <section aria-labelledby="titulo-formulario">
+            <h2 id="titulo-formulario">Formulário de Inscrição e Adesão</h2>
+            <p><small>* Campos indicados com asterisco são de preenchimento obrigatório.</small></p>
+
+            <form action="#" method="post">
+
+                <!-- GRUPO 1: DADOS PESSOAIS -->
+                <fieldset>
+                    <legend>1. Dados Pessoais de Identificação</legend>
+
+                    <p>
+                        <label for="nome-completo">Nome Completo: *</label><br>
+                        <input type="text" id="nome-completo" name="nome_completo" placeholder="Ex: Ana Clara Souza" required minlength="3" maxlength="100">
+                    </p>
+
+                    <p>
+                        <label for="email">E-mail para Contato: *</label><br>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    </p>
+
+                    <p>
+                        <label for="telefone">Telefone / WhatsApp com DDD: *</label><br>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 98765-4321" required pattern="[0-9()\-+\s]+">
+                    </p>
+
+                    <p>
+                        <label for="data-nascimento">Data de Nascimento: *</label><br>
+                        <input type="date" id="data-nascimento" name="data_nascimento" required>
+                    </p>
+
+                    <p>
+                        <label for="genero">Identidade de Gênero:</label><br>
+                        <select id="genero" name="genero">
+                            <option value="">Selecione uma opção</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="nao-binario">Não-binário</option>
+                            <option value="outro">Outro / Prefiro me autodescrever</option>
+                            <option value="nao-informar">Prefiro não informar</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <!-- GRUPO 2: ENDEREÇO E LOCALIZAÇÃO -->
+                <fieldset>
+                    <legend>2. Localização e Residência</legend>
+
+                    <p>
+                        <label for="cep">CEP: *</label><br>
+                        <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" required>
+                    </p>
+
+                    <p>
+                        <label for="logradouro">Logradouro (Rua, Avenida): *</label><br>
+                        <input type="text" id="logradouro" name="logradouro" placeholder="Ex: Av. Paulista" required>
+                    </p>
+
+                    <p>
+                        <label for="numero">Número: *</label><br>
+                        <input type="text" id="numero" name="numero" placeholder="Ex: 123" required>
+                    </p>
+
+                    <p>
+                        <label for="bairro">Bairro: *</label><br>
+                        <input type="text" id="bairro" name="bairro" placeholder="Ex: Bela Vista" required>
+                    </p>
+
+                    <p>
+                        <label for="cidade">Cidade: *</label><br>
+                        <input type="text" id="cidade" name="cidade" placeholder="Ex: São Paulo" required>
+                    </p>
+
+                    <p>
+                        <label for="estado">Estado (UF): *</label><br>
+                        <select id="estado" name="estado" required>
+                            <option value="">Selecione a UF</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <!-- GRUPO 3: PREFERÊNCIAS DE VOLUNTARIADO -->
+                <fieldset>
+                    <legend>3. Perfil de Atuação e Interesses</legend>
+
+                    <p><strong>Modalidade de Colaboração Desejada: *</strong></p>
+                    <p>
+                        <input type="radio" id="modalidade-presencial" name="modalidade" value="presencial" required>
+                        <label for="modalidade-presencial">Voluntariado Presencial (atuação direta na sede ou comunidades)</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="modalidade-remoto" name="modalidade" value="remoto">
+                        <label for="modalidade-remoto">Voluntariado Remoto / Digital (comunicação, captação, suporte online)</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="modalidade-hibrido" name="modalidade" value="hibrido">
+                        <label for="modalidade-hibrido">Modelo Híbrido (flexibilidade entre ações presenciais e remotas)</label>
+                    </p>
+
+                    <p><strong>Áreas e Projetos de Maior Interesse: (Selecione pelo menos um)</strong></p>
+                    <p>
+                        <input type="checkbox" id="area-alimentacao" name="areas_interesse[]" value="alimentacao">
+                        <label for="area-alimentacao">Projeto Alimentando o Futuro (triagem de alimentos, hortas e cozinha solidária)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="area-educacao" name="areas_interesse[]" value="educacao">
+                        <label for="area-educacao">Projeto Saber Mais (tutoria, reforço escolar e letramento digital)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="area-capacitacao" name="areas_interesse[]" value="capacitacao">
+                        <label for="area-capacitacao">Projeto Mãos na Roda (cursos profissionalizantes e oficinas práticas)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="area-administrativo" name="areas_interesse[]" value="administrativo">
+                        <label for="area-administrativo">Apoio Administrativo, Jurídico ou Captação de Recursos</label>
+                    </p>
+
+                    <p>
+                        <label for="disponibilidade">Disponibilidade Semanal de Tempo: *</label><br>
+                        <select id="disponibilidade" name="disponibilidade" required>
+                            <option value="">Selecione sua disponibilidade</option>
+                            <option value="1-2h">De 1 a 2 horas por semana</option>
+                            <option value="3-5h">De 3 a 5 horas por semana</option>
+                            <option value="finais-semana">Apenas aos finais de semana</option>
+                            <option value="eventual">Ações pontuais e eventos específicos</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <!-- GRUPO 4: HABILIDADES E MOTIVAÇÃO -->
+                <fieldset>
+                    <legend>4. Experiência e Carta de Motivação</legend>
+
+                    <p>
+                        <label for="motivacao">Por que você deseja ser voluntário(a) na ONG Mãos Unidas? *</label><br>
+                        <textarea id="motivacao" name="motivacao" rows="5" cols="50" placeholder="Conte-nos brevemente o que motivou sua decisão e quais valores você gostaria de compartilhar conosco..." required></textarea>
+                    </p>
+
+                    <p>
+                        <label for="habilidades">Quais habilidades, experiências ou profissão você pode compartilhar conosco?</label><br>
+                        <textarea id="habilidades" name="habilidades" rows="4" cols="50" placeholder="Ex: pedagogia, culinária, marcenaria, design gráfico, contabilidade, programação..."></textarea>
+                    </p>
+
+                    <p>
+                        <label for="curriculo">Envio opcional de currículo ou portfólio (PDF ou DOC):</label><br>
+                        <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx">
+                    </p>
+                </fieldset>
+
+                <!-- TERMOS E CONSENTIMENTO LGPD -->
+                <fieldset>
+                    <legend>5. Termos e Privacidade</legend>
+
+                    <p>
+                        <input type="checkbox" id="termo-lgpd" name="termo_lgpd" required>
+                        <label for="termo-lgpd">Declaro que li e concordo com a utilização dos meus dados exclusivamente para fins de triagem de voluntariado, em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018). *</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="receber-noticias" name="receber_noticias" value="sim">
+                        <label for="receber-noticias">Desejo receber o boletim informativo bimestral com as novidades e relatórios da ONG Mãos Unidas.</label>
+                    </p>
+                </fieldset>
+
+                <!-- AÇÕES DO FORMULÁRIO -->
+                <p>
+                    <button type="submit">Enviar Cadastro</button>
+                    <button type="reset">Limpar Campos</button>
+                </p>
+
+            </form>
+        </section>
+
+        <!-- CONTEÚDO COMPLEMENTAR: PERGUNTAS FREQUENTES (ASIDE) -->
+        <aside aria-labelledby="titulo-faq">
+            <h2 id="titulo-faq">Dúvidas Frequentes sobre o Voluntariado</h2>
+
+            <article>
+                <h3>Preciso ter experiência prévia para ser voluntário?</h3>
+                <p>Não! Oferecemos acolhimento e treinamentos básicos para todas as funções. O mais importante é a empatia, o compromisso e a vontade de aprender e servir à comunidade.</p>
+            </article>
+
+            <article>
+                <h3>Menores de 18 anos podem participar?</h3>
+                <p>Jovens a partir de 16 anos podem atuar em atividades selecionadas, desde que possuam autorização formal por escrito assinada pelos responsáveis legais.</p>
+            </article>
+
+            <article>
+                <h3>A ONG emite certificado de horas complementares?</h3>
+                <p>Sim. Emitimos declaração e certificado oficial discriminando as atividades desempenhadas e a carga horária cumprida para estudantes universitários e de cursos técnicos.</p>
+            </article>
+        </aside>
+
+    </main>
+
+    <!-- RODAPÉ DA PÁGINA -->
+    <footer>
+        <section aria-labelledby="rodape-cadastro-sobre">
+            <h2 id="rodape-cadastro-sobre">ONG Mãos Unidas</h2>
+            <address>
+                <p>Rua da Solidariedade, 120 - Bairro da Esperança, São Paulo - SP</p>
+                <p>Dúvidas sobre o voluntariado: <a href="mailto:voluntarios@maosunidas.org.br">voluntarios@maosunidas.org.br</a></p>
+            </address>
+        </section>
+
+        <nav aria-label="Navegação complementar">
+            <h3>Links Rápidos</h3>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos Sociais</a></li>
+                <li><a href="cadastro.html">Faça Parte</a></li>
+            </ul>
+        </nav>
+
+        <section aria-labelledby="rodape-cadastro-copy">
+            <h3 id="rodape-cadastro-copy">Informações Legais</h3>
+            <p><small>&copy; 2026 ONG Mãos Unidas. Todos os direitos reservados.</small></p>
+        </section>
+    </footer>
+
+</body>
+</html>

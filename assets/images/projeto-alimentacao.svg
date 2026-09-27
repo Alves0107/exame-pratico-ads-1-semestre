@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <rect width="100%" height="100%" fill="#f0fff4"/>
+  <rect x="15" y="15" width="370" height="220" rx="8" fill="#38a169" opacity="0.15"/>
+  <circle cx="200" cy="100" r="45" fill="#38a169"/>
+  <path d="M190 85 C190 75, 210 75, 210 85 C210 100, 190 115, 190 115 C190 115, 170 100, 170 85 C170 75, 190 75, 190 85" fill="#ffffff"/>
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#22543d" text-anchor="middle">Projeto Alimentando o Futuro</text>
+  <text x="200" y="205" font-family="Arial, sans-serif" font-size="12" fill="#276749" text-anchor="middle">Segurança alimentar e hortas comunitárias</text>
+</svg>
