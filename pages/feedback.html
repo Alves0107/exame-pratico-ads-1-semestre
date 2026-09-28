@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes de Feedback | ONG Mãos Unidas</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .showcase-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 24px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        .showcase-header {
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .showcase-header h1 {
+            color: #1e5aa8;
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        .showcase-header p {
+            color: #6c757d;
+        }
+        .section-block {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            color: #143e75;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .badges-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="showcase-container">
+        <header class="showcase-header">
+            <h1>Componentes de Feedback - ONG Mãos Unidas</h1>
+            <p>Guia de estilos e validação visual de micro-interações: Badges, Alertas, Toast e Modal.</p>
+        </header>
+
+        <!-- 1. CATEGORIZAÇÃO POR ETIQUETAS (BADGES) -->
+        <section class="section-block" aria-labelledby="sec-badges">
+            <h2 id="sec-badges" class="section-title">1. Etiquetas e Crachás Semânticos (Badges)</h2>
+            <div class="badges-grid">
+                <span class="badge badge-success">&#10003; Inscrições Abertas</span>
+                <span class="badge badge-warning">&#9888; Vagas Limitadas</span>
+                <span class="badge badge-danger">&#9873; Ação Urgente</span>
+                <span class="badge badge-info">&#8505; Em Andamento</span>
+                <span class="badge badge-neutral">&#9711; Concluído</span>
+            </div>
+        </section>
+
+        <!-- 2. CAIXAS DE ALERTA -->
+        <section class="section-block" aria-labelledby="sec-alertas">
+            <h2 id="sec-alertas" class="section-title">2. Caixas de Alerta (Feedback Informativo e Operacional)</h2>
+            
+            <div class="alert alert-success" role="alert">
+                <div class="alert-icon">&#10004;</div>
+                <div class="alert-content">
+                    <h4>Cadastro Concluído com Sucesso!</h4>
+                    <p>Seus dados foram validados e registrados no sistema. Nossa equipe de acolhimento entrará em contato via WhatsApp em até 48 horas.</p>
+                </div>
+            </div>
+
+            <div class="alert alert-info" role="status">
+                <div class="alert-icon">&#8505;</div>
+                <div class="alert-content">
+                    <h4>Informação sobre as Capacitações</h4>
+                    <p>Os encontros introdutórios para novos voluntários acontecem todo primeiro sábado do mês em nossa sede comunitária.</p>
+                </div>
+            </div>
+
+            <div class="alert alert-warning" role="alert">
+                <div class="alert-icon">&#9888;</div>
+                <div class="alert-content">
+                    <h4>Atenção aos Campos Obrigatórios</h4>
+                    <p>Por favor, certifique-se de que o CPF e o telefone com DDD estejam preenchidos no formato correto antes do envio.</p>
+                </div>
+            </div>
+
+            <div class="alert alert-danger" role="alert">
+                <div class="alert-icon">&#10008;</div>
+                <div class="alert-content">
+                    <h4>Falha na Conexão</h4>
+                    <p>Não foi possível salvar as alterações no momento. Verifique sua conexão e tente enviar novamente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. NOTIFICAÇÃO TOAST (NÃO OBSTRUTIVA) -->
+        <section class="section-block" aria-labelledby="sec-toast">
+            <h2 id="sec-toast" class="section-title">3. Notificação Toast (Feedback Rápido Não Obstrutivo)</h2>
+            <div class="toast-container">
+                <aside class="toast" role="status" aria-live="polite">
+                    <div class="toast-body">
+                        <span style="color: #2e8540; font-size: 1.25rem;">&#10004;</span>
+                        <div>
+                            <div class="toast-title">Formulário Atualizado</div>
+                            <div class="toast-desc">Preferências de atuação salvas com sucesso.</div>
+                        </div>
+                    </div>
+                    <button class="toast-close" aria-label="Fechar notificação">&times;</button>
+                </aside>
+            </div>
+        </section>
+
+        <!-- 4. MODAL SEMÂNTICO (DIÁLOGO DE CONFIRMAÇÃO) -->
+        <section class="section-block" aria-labelledby="sec-modal">
+            <h2 id="sec-modal" class="section-title">4. Janela Modal (Confirmação de Termos e Adesão)</h2>
+            
+            <div class="modal-overlay">
+                <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+                    <header class="modal-header">
+                        <h3 id="modal-titulo">Confirmar Inscrição no Voluntariado</h3>
+                        <button class="toast-close" aria-label="Fechar janela">&times;</button>
+                    </header>
+                    <div class="modal-body">
+                        <p><strong>Olá, voluntário(a)!</strong></p>
+                        <p>Ao confirmar, seus dados cadastrais serão enviados para o polo regional do <em>Instituto Mãos Unidas</em> e você concorda com o termo de cessão voluntária de atividades conforme a Lei nº 9.608/1998.</p>
+                        <p>Deseja prosseguir com o envio definitivo da sua inscrição?</p>
+                    </div>
+                    <footer class="modal-footer">
+                        <button type="button" class="btn btn-secondary">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Confirmar Envio</button>
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

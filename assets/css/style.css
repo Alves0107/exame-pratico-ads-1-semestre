@@ -1,0 +1,303 @@
+/* ==========================================================================
+   DESIGN SYSTEM - ONG MÃOS UNIDAS
+   Variáveis Globais, Paleta Cromática, Tipografia e Espaçamentos Modulares
+   ========================================================================== */
+
+:root {
+    /* 1. PALETA DE CORES (Mínimo de 8 cores) */
+    --color-primary: #1e5aa8;          /* Azul institucional principal */
+    --color-primary-dark: #143e75;     /* Azul profundo para hover/active */
+    --color-secondary: #2e8540;        /* Verde social/esperança */
+    --color-secondary-dark: #1e5c2b;   /* Verde escuro para estados ativos */
+    --color-accent: #e06d26;           /* Laranja acolhimento / destaque de ação */
+    --color-danger: #d9381e;           /* Vermelho para alertas de erro e badges urgentes */
+    --color-warning: #f59e0b;          /* Amarelo/âmbar para atenção e avisos */
+    --color-neutral-dark: #212529;     /* Grafite escuro para legibilidade de texto */
+    --color-neutral-medium: #6c757d;   /* Cinza médio para bordas secundárias e apoios */
+    --color-neutral-light: #f8f9fa;    /* Cinza suave para fundos de seção */
+    --color-surface-white: #ffffff;    /* Branco puro para superfícies e cartões */
+
+    /* 2. ESCALA TIPOGRÁFICA (5 Patamares Hierárquicos) */
+    --font-xs: 0.875rem;    /* 14px - Notas de rodapé e badges */
+    --font-sm: 1rem;        /* 16px - Tamanho base de corpo de texto */
+    --font-md: 1.25rem;     /* 20px - Subtítulos h3 e títulos de cartões */
+    --font-lg: 1.75rem;     /* 28px - Cabeçalhos de seções h2 */
+    --font-xl: 2.25rem;     /* 36px - Títulos principais h1 */
+
+    /* 3. ESCALA MODULAR DE ESPAÇAMENTOS (Base 8px) */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+
+    /* 4. RAIO DE BORDA E SOMBRAS */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-full: 9999px;
+    
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: var(--font-sm);
+    color: var(--color-neutral-dark);
+    background-color: var(--color-neutral-light);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   COMPONENTES DE FEEDBACK
+   Badges, Caixas de Alerta, Notificações Toast e Janela Modal
+   ========================================================================== */
+
+/* 1. ETIQUETAS E BADGES */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: 4px 10px;
+    font-size: var(--font-xs);
+    font-weight: 600;
+    line-height: 1;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-success {
+    background-color: #e6f4ea;
+    color: var(--color-secondary-dark);
+    border: 1px solid #b7e1cd;
+}
+
+.badge-warning {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+.badge-danger {
+    background-color: #fce8e6;
+    color: var(--color-danger);
+    border: 1px solid #fad2cf;
+}
+
+.badge-info {
+    background-color: #e8f0fe;
+    color: var(--color-primary);
+    border: 1px solid #cce0ff;
+}
+
+.badge-neutral {
+    background-color: #e9ecef;
+    color: var(--color-neutral-dark);
+    border: 1px solid #dee2e6;
+}
+
+/* 2. CAIXAS DE ALERTA */
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+    border-left: 5px solid;
+    box-shadow: var(--shadow-sm);
+}
+
+.alert-icon {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.alert-content h4 {
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-sm);
+    font-weight: bold;
+}
+
+.alert-content p {
+    font-size: var(--font-xs);
+    margin: 0;
+}
+
+.alert-success {
+    background-color: #e6f4ea;
+    color: #137333;
+    border-left-color: var(--color-secondary);
+}
+
+.alert-info {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    border-left-color: var(--color-primary);
+}
+
+.alert-warning {
+    background-color: #fef7e0;
+    color: #b06000;
+    border-left-color: var(--color-warning);
+}
+
+.alert-danger {
+    background-color: #fce8e6;
+    color: #c5221f;
+    border-left-color: var(--color-danger);
+}
+
+/* 3. NOTIFICAÇÃO TOAST */
+.toast-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    max-width: 380px;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-surface-white);
+    border-left: 4px solid var(--color-secondary);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-lg);
+    gap: var(--spacing-md);
+}
+
+.toast-body {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.toast-title {
+    font-size: var(--font-sm);
+    font-weight: 600;
+    color: var(--color-neutral-dark);
+}
+
+.toast-desc {
+    font-size: var(--font-xs);
+    color: var(--color-neutral-medium);
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--color-neutral-medium);
+    padding: 0 4px;
+    line-height: 1;
+}
+
+.toast-close:hover {
+    color: var(--color-neutral-dark);
+}
+
+/* 4. MODAL SEMÂNTICO */
+.modal-overlay {
+    position: relative;
+    background: rgba(33, 37, 41, 0.6);
+    backdrop-filter: blur(2px);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-dialog {
+    background-color: var(--color-surface-white);
+    width: 100%;
+    max-width: 520px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-header h3 {
+    font-size: var(--font-md);
+    color: var(--color-primary-dark);
+}
+
+.modal-body {
+    padding: var(--spacing-lg);
+    color: var(--color-neutral-dark);
+    font-size: var(--font-sm);
+}
+
+.modal-body p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+/* BOTÕES GERAIS */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: var(--font-sm);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: var(--color-neutral-dark);
+    border-color: #ced4da;
+}
+
+.btn-secondary:hover {
+    background-color: #e9ecef;
+}
